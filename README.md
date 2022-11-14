@@ -61,6 +61,7 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+closure allows you to isolate blocks of code that can store specific information to be accessed and used later. 
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -82,8 +83,11 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+at the return function(){. the return ends the function above and isolates the second anonymous function that stores the data on what the newRolls will be. This allows dansRoll and zoesRoll to use the same function but store different results.
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+dansRoll will always say Dan rolled a. The newRoll keyword will update and change on every roll.
 c. What is the lexical scope of `newRoll`? 
+newRoll's lexical scope is the anonymous return function. 
 
 
 ### Task 3 - Stretch Goals
