@@ -72,7 +72,6 @@ function inning(){
     return Math.floor(Math.random() * 3);
 }
 
-
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
 Use the finalScore function below to do the following:
   1. Receive the callback function `inning` that was created in Task 2 in the first parameter
@@ -87,10 +86,20 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*Code Here*/){
-  /*Code Here*/
-}
+function finalScore(callback, inningsToPlay){
+  let homeScore = 0;
+  let awayScore = 0;
+  for(let i = 0; i < inningsToPlay; i++){
+     homeScore = homeScore + callback();
+     awayScore = awayScore + callback();
+    }
+    return {
+      Home: homeScore,
+      Away: awayScore
+    }  
+  }
 
+console.log(finalScore(inning, 9));
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
@@ -105,11 +114,12 @@ For example: invoking getInningScore(inning) might return this object:
   */
 
 
-function getInningScore(/*Your Code Here */) {
-  /*Your Code Here */
-
+function getInningScore(callback) {
+  // let scores = {};
+  // scores.Home = callback();
+  // scores.Away = callback();
+  // return scores;
 }
-
 
 /* STRETCH: ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
 Use the scoreboard function below to do the following:
