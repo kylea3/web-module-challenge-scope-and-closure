@@ -30,11 +30,14 @@ console.log('example task:', processFirstItem(['foo','bar'],function(str){return
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+  the count variable is defined glboally in counter 2 and has function-level scope in counter 1
   2. Which of the two uses a closure? How can you tell?
-  
+  counter 1 uses a closure.it has a second pair of {} inside the first that reference a second anonymous function
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+     counter1 is better to get a count that stores data for individual counters. You could create as many unique counters as you wanted that would store unique counts when called.
+     Counter 2 would be better if you are looking for a global count of some sort that doesn't need unique individual counters.
+     counter 
 */
 
 // counter1 code
@@ -55,6 +58,7 @@ function counter2() {
 }
 
 
+
 /* ⚾️⚾️⚾️ Task 2: inning() ⚾️⚾️⚾️
 Use the inning function below to do the following:
   1. Return a random whole number of points between 0 and 2 scored by one team in an inning
@@ -64,8 +68,8 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(){
+    return Math.floor(Math.random() * 3);
 }
 
 
