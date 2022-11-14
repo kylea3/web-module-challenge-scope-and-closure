@@ -115,12 +115,13 @@ For example: invoking getInningScore(inning) might return this object:
 
 
 function getInningScore(callback) {
-  // let scores = {};
-  // scores.Home = callback();
-  // scores.Away = callback();
-  // return scores;
+  return {
+  Home: callback(),
+  Away: callback()
+ }
 }
 
+console.log(getInningScore(inning));
 /* STRETCH: ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
 Use the scoreboard function below to do the following:
   1. Receive the callback function in the first parameter that will take `getInningScore` from Task 4 as its argument
